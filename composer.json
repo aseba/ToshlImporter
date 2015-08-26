@@ -1,0 +1,17 @@
+{
+    "name": "aseba/toshl-importer",
+    "description": "Toshl Old Data Importer",
+    "require": {
+        "league/oauth2-client": "^1.0"
+    },
+    "require-dev": {
+        "psy/psysh": "^0.5.2",
+        "fabpot/php-cs-fixer": "^1.10"
+    },
+    "authors": [
+        {
+            "name": "Sebastian M. Alvarez",
+            "email": "sebastianmalvarez@gmail.com"
+        }
+    ]
+}
