@@ -52,16 +52,20 @@ foreach($expenses as $expense) {
             "extra" => ['imported'=>true]
         ]
     ];
-    $response = $client->request(
-        'POST',
-        'expenses',
-        $payload
-    );
-    if($response->getStatusCode() == 200 or $response->getStatusCode() == 201) {
-        setExpenseAsImported($expense['id']);
-        $count++;
+    try {
+        $response = $client->request(
+            'POST',
+            'expenses',
+            $payload
+        );
+        if($response->getStatusCode() == 200 or $response->getStatusCode() == 201) {
+            setExpenseAsImported($expense['id']);
+            $count++;
+        }
         echo ".";
-    } else {
-        echo sprintf("\nStoped after %d with %s", $count, $response->getStatusCode());
+    } catch (Exception $e) {
+        var_dump($expense);
+        echo sprintf("\nStoped after %d with %s", $count, $e->getmessage());
+        exit;
     }
 }

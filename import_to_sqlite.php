@@ -47,8 +47,10 @@ unset($expense_payload);
 $database = new ExpensesDB;
 
 foreach($expenses as $expense) {
-    $database->exec(
-        sprintf("INSERT INTO expenses %s", $expense->getInsertStatement())
-    );
-    echo ".";
+    if($expense->amount > 0) {
+        $database->exec(
+            sprintf("INSERT INTO expenses %s", $expense->getInsertStatement())
+        );
+        echo ".";
+    }
 }
