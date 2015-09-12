@@ -12,13 +12,13 @@ CREATE TABLE expenses(id INT PRIMARY KEY, amount REAL, date TEXT, tags TEXT, imp
 ```
 
 ##And a .csv with your expenses
-The .csv has to have the first line like
+The .csv must be named `expenses.csv` and the first line must be
 
 ```
 date,tag,amount
 ```
 
-###Where
-- `date` is in the form of `YYYY-mm-dd`
-- `tag` is a comma separated list `onetag,othertag,someothertag`
-- `amount` is a float value
+All other lines must follow that schema having:
+- `date` in the form of `YYYY-mm-dd`
+- `tag` as a comma separated list `onetag,othertag,someothertag`
+- `amount` as a float value
