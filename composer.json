@@ -2,7 +2,8 @@
     "name": "aseba/toshl-importer",
     "description": "Toshl Old Data Importer",
     "require": {
-        "league/oauth2-client": "^1.0"
+        "league/oauth2-client": "^1.0",
+        "guzzlehttp/guzzle": "^6.1"
     },
     "require-dev": {
         "psy/psysh": "^0.5.2",
@@ -13,5 +14,10 @@
             "name": "Sebastian M. Alvarez",
             "email": "sebastianmalvarez@gmail.com"
         }
-    ]
+    ],
+    "autoload"    : {
+            "psr-4": {
+                "ToshlImporter\\": "src/"
+            }
+    }
 }
