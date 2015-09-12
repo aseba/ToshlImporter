@@ -19,6 +19,6 @@ date,tag,amount
 ```
 
 ###Where
-- `date` is in the form of `YYYY-mm-d`
+- `date` is in the form of `YYYY-mm-dd`
 - `tag` is a comma separated list `onetag,othertag,someothertag`
 - `amount` is a float value
